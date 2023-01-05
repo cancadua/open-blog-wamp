@@ -9,5 +9,4 @@ urlpatterns = [
     path('delete/<int:pk>', views.delete_post, name='delete'),
     path('posts/<int:pk>/new_comment', views.NewComment.as_view(), name='comments/new'),
     path('comments/<int:pk>', views.delete_comment, name='delete-comment'),
-
 ]

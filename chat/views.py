@@ -41,7 +41,7 @@ class UpdatePost(generic.UpdateView):
     model = Post
     template_name = 'update_post.html'
     fields = '__all__'
-
+    success_url = ''
 
 def delete_post(request, pk=None):
     post_to_delete = Post.objects.get(id=pk)
