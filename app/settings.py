@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 
@@ -8,9 +9,10 @@ SECRET_KEY = 'django-insecure-t!+r+2-*o+(gdtxt(s$e5dvsigpi+8fw1n)rfhp34m00@6wjmc
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
+    'taggit',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
     'chat.apps.ChatConfig',
@@ -55,7 +57,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Warsaw'
 
 DATETIME_FORMAT = 'Y-m-d H:i:s'
 
@@ -64,8 +66,9 @@ USE_L10N = False
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'chat/static_root')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'chat/static'),

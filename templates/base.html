@@ -2,17 +2,19 @@
 {% load static %}
 <html lang="en">
 <head>
-    <title>Messages</title>
+    <title>Open-blog</title>
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body>
-{% block navbar %}
-    {% include 'navbar.html' %}
-{% endblock navbar %}
-<div class="main-body">
-    {% block content %}
-    {% endblock content %}
-</div>
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock navbar %}
+    <div class="main-body">
+        {% block content %}
+        {% endblock content %}
+    </div>
 </body>
 </html>

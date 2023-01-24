@@ -2,8 +2,7 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/post_form.css' %}">
-    <div class='chat-container'>
-
+    <div class='post-container'>
         <div class="form-post-container">
             <form method="POST" class='post-form'>
                 {% csrf_token %}
@@ -12,17 +11,22 @@
                        name='title'
                        value={{ post.title }}
                                placeholder='Title'/>
-                <input class='content-textarea'
+                <input
+                       id="id_tags"
+                       value="{% for tag in post.tags.all %}{{ tag.name }} {% endfor %}"
+                       name='tags'
+                       placeholder='Tags'/>
+                <textarea class='content-textarea'
                        id="id_content"
                        name='content'
-                       value={{ post.content }}
-                               placeholder='Content'/>
+                       placeholder='Content'>{{ post.content }}</textarea>
+
                 <div class='manage-post'>
-                    <button class='send-post'>Create Post</button>
+                    <button class='send-post'>Confirm edit</button>
                 </div>
             </form>
         </div>
-        <a class='new-post' href="{% url 'posts' %}">
+        <a class='back-to-posts' href="{% url 'posts' %}">
             Back to posts
         </a>
     </div>

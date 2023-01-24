@@ -4,7 +4,7 @@
 
     <link rel="stylesheet" href="{% static 'css/post_form.css' %}">
 
-    <div class='chat-container'>
+    <div class='post-container'>
 
         <div class="form-post-container">
             <form id="form" method="POST" class='post-form'>
@@ -14,17 +14,22 @@
                        id="id_title"
                        name='title'
                        placeholder='Title'/>
-                <input class='content-textarea'
+                <textarea class='content-textarea'
                        id="id_content"
                        value=""
                        name='content'
-                       placeholder='Content'/>
+                       placeholder='Content'></textarea>
+                <input
+                       id="id_tags"
+                       value=""
+                       name='tags'
+                       placeholder='Tags'/>
                 <div class='manage-post'>
                     <button class='send-post'>Create Post</button>
                 </div>
             </form>
         </div>
-        <a class='new-post' href="{% url 'posts' %}">
+        <a class='back-to-posts' href="{% url 'posts' %}">
             Back to posts
         </a>
     </div>

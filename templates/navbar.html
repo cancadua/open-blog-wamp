@@ -2,6 +2,13 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <div class="navbar">
-        <a href="{% url 'home' %}">Start</a>
+        <a href="{% url 'posts' %}">Home</a>
+        <a href="{% url 'posts/new' %}">
+            Add post
+        </a>
+        <form class="search" action="{% url 'searched' %}">
+            <input type="search" placeholder="Search..." name="search"/>
+            <button type="submit">Search</button>
+        </form>
     </div>
 {% endblock navbar %}
