@@ -7,7 +7,7 @@ TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = 'django-insecure-t!+r+2-*o+(gdtxt(s$e5dvsigpi+8fw1n)rfhp34m00@6wjmc'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
@@ -57,7 +57,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Warsaw'
+TIME_ZONE = 'Europe/London'
 
 DATETIME_FORMAT = 'Y-m-d H:i:s'
 

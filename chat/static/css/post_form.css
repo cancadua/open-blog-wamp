@@ -66,6 +66,7 @@
 }
 
 .back-to-posts {
+    display: flex;
     padding: 0.5rem;
     color: black;
     display: flex;

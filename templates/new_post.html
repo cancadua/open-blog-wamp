@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     {% load static %}
-
     <link rel="stylesheet" href="{% static 'css/post_form.css' %}">
-
     <div class='post-container'>
-
         <div class="form-post-container">
             <form id="form" method="POST" class='post-form'>
                 {% csrf_token %}
