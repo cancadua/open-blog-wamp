@@ -51,7 +51,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3308',
+        'PORT': '3306',
     }
 }
 
@@ -67,8 +67,6 @@ USE_L10N = False
 USE_TZ = True
 
 STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'chat/static_root')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'chat/static'),
