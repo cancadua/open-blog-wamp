@@ -2,10 +2,10 @@ import os
 import sys
 import site
 
-# Add the site-packages of the chosen virtualenv to work with
+# Należy zmienić ścieżkę konfiguracji do site-packages na własną według wzoru
 site.addsitedir('C:/Users/adek/AppData/Local/Programs/Python/Python311/Lib/site-packages')
 
-# Add the app's directory to the PYTHONPATH
+# Należy zmienić ścieżkę konfiguracji do projektu i folderu app w projekcie na własną według wzoru
 sys.path.append('C:/Adek/Projekty/open-blog-wamp')
 sys.path.append('C:/Adek/Projekty/open-blog-wamp/app')
 
