@@ -11,7 +11,7 @@
 ### Uruchomienie
  Należy uruchomić komendę ```python manage.py migrate``` w głównym folderze projektu, następnie zainstalować mod_wsgi. Komendą w wierszu polecenia ```set MOD_WSGI_APACHE_ROOTDIR=C:\wamp64\bin\apache\apache2.4.46``` ustawiamy miejsce instalacji apache (miejsce oraz wersja mogą się różnić), następnie zatwierdzamy ```pip install mod-wsgi```.
  
-Należy zmienić konfigurację  ```...open-blog-wamp/app/wsgi.py``` według zawartych instrukcji
+Należy zmienić konfigurację  ```...open-blog-wamp/app/wsgi.py``` według zawartych w środku pliku instrukcji.
  
 Następnie do pliku konfiguracyjnego w miejscu instalacji WampServer ``/wamp64/bin/apache/apache2.4.46/conf/httpd.conf``` na końcu pliku dodajemy 
 ```
